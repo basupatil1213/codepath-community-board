@@ -222,10 +222,15 @@ const ProjectsContainer = () => {
     const [projects, setProjects] = useState(sampleProjectsData.projects);
     
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
-        {projects.map((project: Project, idx: number) => (
-            <ProjectCard key={idx} project={project} />
-        ))}
+        <div>
+            <div className="w-full border-b-4">
+                <p className="pb-2 text-xl md:text-5xl">Open Projects for Contribution</p>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
+            {projects.map((project: Project, idx: number) => (
+                <ProjectCard key={idx} project={project} />
+            ))}
+            </div>
         </div>
     )
 }
